@@ -114,10 +114,24 @@ header .header2 h4 {
 
 .allElems .allfeatures {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;          /* sab ek line me rahenge */
     align-items: flex-start;
-    gap: 74px;
+    gap: 40px;
+
+    overflow-x: auto;           /* horizontal scroll */
+    padding-bottom: 10px;
 }
+
+/* Scrollbar styling (clean look) */
+.allElems .allfeatures::-webkit-scrollbar {
+    height: 8px;
+}
+
+.allElems .allfeatures::-webkit-scrollbar-thumb {
+    background: var(--tri1);
+    border-radius: 10px;
+}
+
 
 .elem {
     background-color: #FEBA17;
@@ -130,7 +144,8 @@ header .header2 h4 {
     transition: all ease 0.2s;
     cursor: pointer;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-
+    min-width: 330px;   /* card shrink nahi hoga */
+    flex: 0 0 auto;     /* ek hi row maintain karega */
 }
 
 .elem img {
