@@ -1,0 +1,607 @@
+:root {
+    --pri: #F8F4E1;
+    --sec: #381c0a;
+    --tri1: #FEBA17;
+    --tri2: #74512D;
+    --red: red;
+    --green: rgb(9, 138, 89);
+    --blue: rgb(0, 191, 255);
+    --black: black;
+}
+
+@font-face {
+    font-family: aeonik;
+    font-weight: 200;
+    src: url(./AeonikTRIAL-Light.otf);
+}
+
+@font-face {
+    font-family: aeonik;
+    font-weight: 500;
+    src: url(./AeonikTRIAL-Regular.otf);
+}
+
+@font-face {
+    font-family: aeonik;
+    font-weight: 700;
+    src: url(./AeonikTRIAL-Bold.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: aeonik;
+    color: var(--pri);
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: var(--sec);
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: var(--tri2);
+}
+
+section.allElems {
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+    overflow: auto;
+    position: absolute;
+}
+
+.allElems header {
+    height: 400px;
+    width: 100%;
+    background-color: var(--tri2);
+    background-image: url(https://images.pexels.com/photos/27060871/pexels-photo-27060871.jpeg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+}
+
+header .header1 h1 {
+    font-size: 100px;
+
+}
+
+header .header1 h4 {
+    font-size: 60px;
+    font-weight: 500;
+
+}
+
+header .header2 h2 {
+    font-size: 80px;
+    font-weight: 600;
+
+}
+
+header .header2 h3 {
+    font-size: 30px;
+    font-weight: 500;
+
+}
+
+header .header2 h4 {
+    font-size: 50px;
+    font-weight: 600;
+
+}
+
+
+
+
+
+.allElems .allfeatures {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 74px;
+}
+
+.elem {
+    background-color: #FEBA17;
+    height: 400px;
+    width: 330px;
+    font-size: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.elem h2 {
+    position: absolute;
+    bottom: 4%;
+    font-weight: 500;
+    font-size: 33px;
+    right: 5%;
+}
+
+.elem:active {
+    scale: 0.97;
+}
+
+.fullElem {
+    height: 100%;
+    width: 100%;
+    background-color: #381c0a;
+    padding: 40px;
+
+    display: none;
+    position: absolute;
+}
+
+.back {
+    position: absolute;
+    right: 5%;
+    background-color: red;
+    border-radius: 10px;
+    padding: 10px 11px;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+
+}
+
+.back:active {
+    scale: 0.97;
+}
+
+.todo-list-fullpage {
+    display: blo
+}
+
+.todo-list-fullpage h2 {
+    font-size: 65px;
+}
+
+.todo-list-fullpage .todo-container {
+    height: 80%;
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-list-fullpage .todo-container .addTask {
+    width: 33%;
+    background-color: var(--tri2);
+    height: 100%;
+    border-radius: 20px;
+}
+
+.todo-list-fullpage .todo-container .allTask {
+    width: 65%;
+    background-color: var(--tri2);
+    height: 100%;
+    border-radius: 20px;
+}
+
+.todo-list-fullpage .todo-container .addTask form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.todo-container .addTask form #task-input {
+    padding: 15px 25px;
+    width: 100%;
+    font-size: 28px;
+    background-color: var(--sec);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.todo-container .addTask form textarea {
+    padding: 15px 25px;
+    width: 100%;
+    font-size: 28px;
+    background-color: var(--sec);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.todo-container .addTask form button {
+    padding: 15px 25px;
+    width: 100%;
+    font-size: 28px;
+    background-color: var(--tri1);
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    outline: none;
+    margin-bottom: 20px;
+    transition: all ease 0.3s;
+}
+
+.todo-container .addTask form button:active {
+    scale: 0.97;
+}
+
+.todo-list-fullpage .todo-container .allTask {
+    width: 65%;
+    background-color: var(--tri2);
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    overflow: auto;
+}
+
+.Task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--pri);
+    padding: 20px 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+}
+
+.Task h5 {
+    color: var(--sec);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Task h5 span {
+    background-color: var(--red);
+    color: var(--pri);
+    font-size: 11px;
+    padding: 4px 6px;
+    border-radius: 50px;
+
+
+}
+
+.Task h5 span.true {
+    opacity: 1;
+}
+
+.Task h5 span.false {
+    opacity: 0;
+}
+
+.Task button {
+    padding: 15px 30px;
+    color: var(--pri);
+    background-color: green;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+}
+
+.Task button:active {
+    transform: scale(0.97);
+}
+
+.mark-imp {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    gap: 30px;
+}
+
+.mark-imp input {
+    scale: 2;
+}
+
+.mark-imp label {
+    font-size: 20px;
+}
+
+
+
+.daily-planner-fullpage h2 {
+    font-size: 70px;
+}
+
+.daily-planner-fullpage .day-planner {
+    background-color: var(--tri2);
+    height: 85%;
+    margin-top: 40px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    overflow: auto;
+    justify-content: space-between;
+}
+
+.daily-planner-fullpage .day-planner .day-planner-time {
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 49%;
+    margin-bottom: 15px;
+}
+
+.day-planner .day-planner-time p {
+    position: absolute;
+    top: 12%;
+    left: 2%;
+    font-size: 18px;
+}
+
+.day-planner .day-planner-time input {
+    padding: 20px 45px;
+    width: 100%;
+    background-color: var(--sec);
+    border-radius: 5px;
+    border: none;
+    font-size: 32px;
+    padding-top: 34px;
+    outline: none;
+}
+
+.motivational-fullpage {
+
+    position: relative;
+}
+
+.motivational-fullpage .motivational-container {
+    height: 500px;
+    width: 600px;
+    background-color: var(--tri2);
+    position: absolute;
+    border-radius: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.motivational-fullpage .motivational-container::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--tri1);
+    border-radius: 50px;
+    scale: 1.15;
+    filter: blur(20px);
+    z-index: 8;
+
+}
+
+.motivational-fullpage .motivational-container .motivational-wrapper {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    background-color: var(--tri1);
+    padding: 17px;
+    border-radius: 40px;
+
+}
+
+.motivation-1 {
+    background-color: var(--tri2);
+    padding: 30px;
+    border-radius: 40px;
+}
+
+.motivation-1 h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.motivation-2 {
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.motivation-2 h1 {
+    font-size: 42px;
+    font-weight: 500;
+    color: var(--sec);
+}
+
+.motivation-3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.motivation-3 h2 {
+    background-color: var(--tri2);
+    padding: 30px;
+    border-radius: 25px;
+    font-size: 25px;
+    width: fit-content;
+    font-weight: 500;
+    text-align: right;
+}
+
+.pomodoro-fullpage {
+
+    position: relative;
+    background-image: url(https://images.pexels.com/photos/29169775/pexels-photo-29169775.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+
+}
+
+.pomodoro-fullpage h2 {
+    font-size: 65px;
+
+}
+
+.pomodoro-fullpage .pomo-timer {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.pomo-timer h1 {
+    font-size: 170px;
+    color: rgb(217, 217, 212);
+}
+
+.pomo-timer button {
+    background-color: var(--tri2);
+    padding: 15px 40px;
+    font-size: 32px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 7px 7px 0px black;
+    transition: all ease 0.5s;
+}
+
+.pomo-timer button:active {
+    box-shadow: 0px 0px 0px black;
+}
+
+/* ===== DAILY GOALS UI ===== */
+
+.goals-wrapper {
+    margin-top: 40px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.goals-add {
+    background: var(--tri2);
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.goals-add input {
+    flex: 1;
+    padding: 18px;
+    font-size: 22px;
+    border: none;
+    border-radius: 8px;
+    background: var(--sec);
+}
+
+.goals-add button {
+    padding: 18px 25px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    background: var(--tri1);
+    cursor: pointer;
+}
+
+.goals-display {
+    background: var(--tri2);
+    flex: 1;
+    padding: 25px;
+    border-radius: 15px;
+    overflow-y: auto;
+}
+
+.goal-card {
+    background: var(--pri);
+    padding: 20px 25px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.goal-card p {
+    font-size: 22px;
+    color: var(--sec);
+}
+
+.goal-card button {
+    background: green;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+/* THEME TOGGLE BUTTON */
+
+#theme-toggle {
+    margin-top: 15px;
+    padding: 10px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background: #FEBA17;
+    cursor: pointer;
+}
+
+/* LIGHT THEME VARIABLES */
+
+body.light {
+    --pri: #222;
+    --sec: #f4f4f4;
+    --tri1: #ffcc33;
+    --tri2: #ffffff;
+}
+
+/* Light Mode Background Fix */
+
+body.light #main {
+    background-color: var(--sec);
+}
+
+body.light .goal-card {
+    background: #ffffff;
+    color: #222;
+}
